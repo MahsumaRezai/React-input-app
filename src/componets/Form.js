@@ -4,13 +4,13 @@ const Form = () => {
         <div className="form">
             <div className="content">
                 <div>
-                    <h1>Name Of Class</h1>
+                    <h1 className="text">Name Of Class</h1>
                 </div>
                 <div>
-                    <input type="text"></input>
+                    <input type="text" className="input"></input>
                 </div>
                 <div>
-                    <button>Add class</button>
+                    <button className="btn">Add class</button>
                 </div>
 
 

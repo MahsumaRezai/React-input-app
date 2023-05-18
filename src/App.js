@@ -1,10 +1,10 @@
 import './App.css';
-
+import Form from './componets/Form.js'
 const App = () => {
 
   return (
     <div className="App">
-      <h1>hello m</h1>
+      <Form></Form>
 
     </div>
   )

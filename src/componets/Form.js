@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Button from '../componets/Button.js'
-import '.Form.css';
+import './Form.css';
 const Form = (props) => {
     const [entervalue, setentervalue] = useState('');
     const goalInputChangeHandler = (event) => {

@@ -1,24 +1,25 @@
-import './Form.css'
-const Form = () => {
+import React, { useState } from 'react';
+import Button from '../componets/Button.js'
+import '.Form.css';
+const Form = (props) => {
+    const [entervalue, setentervalue] = useState('');
+    const goalInputChangeHandler = (event) => {
+        setentervalue(event.target.value)
+
+    }
+
+    const formSubmitHandler = (event) => {
+        event.preventDefault();
+        props.onAddGoal(entervalue)
+    };
     return (
-        <div className="form">
-            <div className="content">
-                <div>
-                    <h1 className="text">Name Of Class</h1>
-                </div>
-                <div>
-                    <input type="text" className="input"></input>
-                </div>
-                <div>
-                    <button className="btn">Add class</button>
-                </div>
-
-
-
-
+        <form onSubmit={formSubmitHandler}>
+            <div className="form-control">
+                <label>Course Goal</label>
+                <input type="text" onChange={goalInputChangeHandler} />
             </div>
-
-        </div>
-    )
+            <Button type="submit">Add Goal</Button>
+        </form>
+    );
 }
 export default Form;
